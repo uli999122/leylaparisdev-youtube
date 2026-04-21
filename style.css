@@ -1,0 +1,112 @@
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+body {
+  font-family: 'Segoe UI', sans-serif;
+  background: #1a0022;
+  color: #fff;
+  text-align: center;
+}
+
+.background {
+  position: fixed;
+  inset: 0;
+  background: radial-gradient(circle at 50% 20%, #ff69b4, #c71585, #4b0082, #1a0022);
+  z-index: -1;
+  animation: bgPulse 25s ease infinite;
+}
+
+@keyframes bgPulse { 0%,100% {opacity:0.95;} 50%{opacity:1;} }
+
+.logo { 
+  margin-top: 60px; 
+  font-size: 4.8rem; 
+  color: #ff69b4; 
+  display: flex; 
+  align-items: center; 
+  justify-content: center; 
+  gap: 15px;
+}
+
+.verified {
+  color: #1DA1F2;
+  font-size: 2.2rem;
+  animation: verifiedPulse 2s infinite;
+}
+
+.subtitle { font-size: 1.8rem; color: #ffb6c1; margin: 15px 0 40px; }
+
+/* Botones súper bonitos */
+.submit-btn {
+  margin-top: 25px;
+  padding: 18px 70px;
+  background: linear-gradient(45deg, #ff1493, #ff69b4);
+  border: none;
+  border-radius: 50px;
+  color: white;
+  font-size: 1.6rem;
+  cursor: pointer;
+  box-shadow: 0 0 35px #ff1493;
+  transition: all 0.4s ease;
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.submit-btn:hover {
+  transform: scale(1.12) translateY(-4px);
+  box-shadow: 0 0 60px #ff69b4;
+  animation: shine 1.5s infinite;
+}
+
+@keyframes shine {
+  0%, 100% { box-shadow: 0 0 35px #ff1493; }
+  50% { box-shadow: 0 0 80px #ff69b4; }
+}
+
+@keyframes verifiedPulse {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.7; }
+}
+
+/* Resto del estilo (galería, encuesta, etc.) se mantiene bonito */
+.gallery-header { display: flex; justify-content: center; gap: 15px; flex-wrap: wrap; margin: 30px 0; }
+
+#searchInput, #dateFilter {
+  padding: 14px 20px;
+  border-radius: 30px;
+  border: none;
+  background: rgba(255,255,255,0.12);
+  color: white;
+  font-size: 1.1rem;
+}
+
+.load-more {
+  margin: 50px auto;
+  padding: 16px 60px;
+  background: linear-gradient(45deg, #c71585, #ff69b4);
+  border: none;
+  border-radius: 50px;
+  color: white;
+  font-size: 1.4rem;
+  cursor: pointer;
+}
+
+.survey {
+  max-width: 700px;
+  margin: 100px auto 80px;
+  padding: 50px 40px;
+  background: rgba(255,255,255,0.07);
+  border-radius: 28px;
+  border: 3px solid #ff69b4;
+}
+
+.survey input {
+  width: 100%;
+  padding: 18px;
+  margin: 14px 0;
+  background: rgba(0,0,0,0.5);
+  border: 2px solid #ff69b4;
+  border-radius: 18px;
+  color: white;
+  font-size: 1.15rem;
+}
