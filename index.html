@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>LeylaparisDev - YouTube</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+<body>
+
+  <!-- Pantalla de carga bonita -->
+  <div id="loader" class="loader-screen">
+    <div class="spinner"></div>
+    <p class="loading-text">Cargando canal rosa de LeylaparisDev...</p>
+  </div>
+
+  <div class="content">
+
+    <div class="background"></div>
+
+    <header>
+      <div class="logo">
+        <i class="fab fa-youtube"></i>
+        <h1>LeylaparisDev <span class="verified">✔</span></h1>
+      </div>
+      <p class="subtitle">Contenido bonito y lleno de rosa 💖</p>
+      <p id="motivationalPhrase" class="motivational"></p>
+    </header>
+
+    <main>
+      <!-- Último video -->
+      <section class="latest-video">
+        <h2>Último Video</h2>
+        <div id="latest-video-container"></div>
+      </section>
+
+      <!-- Galería -->
+      <section class="video-gallery">
+        <div class="gallery-header">
+          <h2>Todos los Videos</h2>
+          <input type="text" id="searchInput" placeholder="Buscar video...">
+          <select id="dateFilter">
+            <option value="">Todos</option>
+            <option value="7">Última semana</option>
+            <option value="30">Último mes</option>
+          </select>
+        </div>
+        
+        <div id="video-grid" class="grid"></div>
+        <button id="loadMoreBtn" class="load-more">Cargar más videos</button>
+      </section>
+
+      <!-- Encuesta Mejorada -->
+      <section class="survey">
+        <h2>Participa para aparecer en uno de mis videos 🎥</h2>
+        <form id="surveyForm">
+          <input type="text" id="name" placeholder="Tu nombre completo" required>
+          <input type="number" id="age" placeholder="Tu edad (mínimo 12 años)" min="12" required>
+          <input type="text" id="country" placeholder="Tu país" required>
+          <input type="tel" id="phone" placeholder="Número de teléfono (WhatsApp)" required>
+          
+          <select id="videoTheme" class="theme-select">
+            <option value="">¿Qué tipo de video te gustaría?</option>
+            <option value="Maquillaje">Maquillaje</option>
+            <option value="Outfit">Outfit / Moda</option>
+            <option value="Historia">Mi historia personal</option>
+            <option value="Challenge">Challenge o Trend</option>
+            <option value="Otro">Otro</option>
+          </select>
+
+          <button type="button" id="submitSurvey" class="submit-btn">
+            <i class="fas fa-paper-plane"></i> Enviar mi participación
+          </button>
+        </form>
+      </section>
+    </main>
+
+    <footer>
+      <p>®TODOS LOS DERECHOS RESERVADOS ® 2026</p>
+    </footer>
+  </div>
+
+  <!-- Botón flotante -->
+  <button id="floatBtn" class="float-btn">
+    <i class="fas fa-heart"></i> Quiero participar
+  </button>
+
+  <script src="script.js"></script>
+</body>
+</html>
